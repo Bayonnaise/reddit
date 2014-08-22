@@ -1,0 +1,14 @@
+<% if user_signed_in? %>
+	<%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+<% else %>
+	<%= link_to 'Sign in', new_user_session_path %>
+<% end %>
+
+<%= link_to "Submit a new text post", new_post_path(type: "text") %>
+<%= link_to "Submit a new link", new_post_path(type: "link") %>
+
+<% if @posts.any? %>
+	<%= render @posts.reverse %>
+<% else %>
+	No posts yet
+<% end %>

@@ -1,0 +1,13 @@
+<% if post.url.present? %>
+	<a href='<%= post.url %>'><%= post.title %></a>
+	<% type = "url" %>
+<% else %>
+	<%= post.title %>
+	<% type = "text" %>
+<% end %>
+<%= post.text %>
+
+<% if post.was_created_by?(current_user) %>
+	<%= link_to 'Edit post', edit_post_path(post, type: type) %>
+	<%= link_to 'Delete post', post_path(post), method: :delete %>
+<% end %>
