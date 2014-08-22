@@ -10,6 +10,7 @@ RSpec.describe Post, :type => :model do
 
   context 'counting votes' do
   	let(:post) { create(:post) }
+
   	before(:each) do
   		2.times { post.votes << Vote.create(direction: 'up') }
   		post.votes << Vote.create(direction: 'down') 
@@ -26,5 +27,12 @@ RSpec.describe Post, :type => :model do
   	it 'can calculate the net vote tally' do
   		expect(post.count_netvotes).to eq 1
   	end
+  end
+
+  context 'handling urls' do
+    it 'can extract the domain from a url' do
+      post = create(:post, url: 'http://www.google.com/test-string5678')
+      expect(post.get_domain).to eq 'google.com'
+    end
   end
 end

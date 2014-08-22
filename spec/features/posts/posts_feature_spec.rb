@@ -2,8 +2,8 @@ require 'rails_helper'
 
 describe 'viewing posts' do
 	before(:each) do
-		user = create(:user)
-		login_as user
+		@user = create(:user)
+		login_as @user
 	end
 
 	context 'no posts have been added' do
@@ -17,7 +17,7 @@ describe 'viewing posts' do
 
   context 'posts have been added' do
     before(:each) do
-      Post.create(title: 'Test title', text: 'This is the body')
+      @user.posts.create(title: 'Test title', text: 'This is the body')
     end
 
     it 'should display them' do

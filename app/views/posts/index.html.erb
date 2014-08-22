@@ -1,6 +1,8 @@
 
 <% if @posts.any? %>
-	<%= render @posts.sort_by { |post| post.count_netvotes }.reverse %>
+	<ul class='list-group'>
+		<%= render @posts.sort_by { |post| post.count_netvotes }.reverse %>
+	</ul>
 <% else %>
 	No posts yet
 <% end %>

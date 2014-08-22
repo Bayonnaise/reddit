@@ -19,4 +19,8 @@ class Post < ActiveRecord::Base
 	def count_netvotes
 		self.count_upvotes - self.count_downvotes
 	end
+
+	def get_domain
+		URI.parse(self.url).host.sub(/^www\./, '')
+	end
 end

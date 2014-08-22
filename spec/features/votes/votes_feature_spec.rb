@@ -8,7 +8,7 @@ describe 'votes' do
 
 	context 'when not logged in' do
 		before(:each) do
-			create(:post)
+			@user.posts.create(title: 'Test title')
 		end
 
 		it 'user cannot upvote posts', js: true do
@@ -31,7 +31,7 @@ describe 'votes' do
 		end
 
 		it 'user can upvote posts', js: true do
-			create(:post)
+			@user.posts.create(title: 'Test title')
 			visit '/posts'
 			expect(page).to have_css('.vote-count', text: '0')
 			click_link 'Upvote'
@@ -39,7 +39,7 @@ describe 'votes' do
 		end
 
 		it 'user can downvote posts', js: true do
-			create(:post)
+			@user.posts.create(title: 'Test title')
 			visit '/posts'
 			expect(page).to have_css('.vote-count', text: '0')
 			click_link 'Downvote'

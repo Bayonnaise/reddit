@@ -16,16 +16,16 @@ describe 'editing posts' do
 		end
 
 		it 'user can edit own posts' do
-			@user1.posts.create(title: 'Test title', text: 'This is the body')
+			@user1.posts.create(title: 'Test title')
 			visit '/posts'
 			click_link 'Edit post'
-			fill_in 'Title', with: 'Changed the title'
+			fill_in 'post_title', with: 'Changed the title'
 			click_button 'Submit'
 			expect(page).to have_content 'Changed the title'
 		end
 
 		it 'user cannot edit the posts of others' do
-			@user2.posts.create(title: 'Test title', text: 'This is the body')
+			@user2.posts.create(title: 'Test title')
 			visit '/posts'
 			expect(page).not_to have_link 'Edit post'
 		end

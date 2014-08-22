@@ -1,13 +1,13 @@
 <% if user_signed_in? %>
 	<div>
-		<%= link_to "Upvote", post_votes_path(post, direction: 'up'), class: 'vote-link' %>
+		<%= link_to "Upvote", post_votes_path(post, direction: 'up'), class: 'vote-link glyphicon glyphicon-chevron-up' %>
 		<span class='vote-count badge'><%= post.count_netvotes %></span>
-		<%= link_to "Downvote", post_votes_path(post, direction: 'down'), class: 'vote-link'%>
+		<%= link_to "Downvote", post_votes_path(post, direction: 'down'), class: 'vote-link glyphicon glyphicon-chevron-down'%>
 	</div>
 <% else %>
 	<div>
-		<%= link_to "Upvote", new_user_session_path %>
+		<%= link_to "Upvote", new_user_session_path, class: 'glyphicon glyphicon-chevron-up' %>
 		<span class='vote-count'><%= post.count_netvotes %></span>
-		<%= link_to "Downvote", new_user_session_path %>
+		<%= link_to "Downvote", new_user_session_path, class: 'glyphicon glyphicon-chevron-down' %>
 	</div>
 <% end %>

@@ -13,9 +13,9 @@ class PostsController < ApplicationController
 
 	def create
 		@post = Post.new(params[:post].permit(:title, :text, :url))
+		@post.user_id = current_user.id
 
 		if @post.save
-			@post.votes << Vote.new(direction: 'up')
 			redirect_to posts_path
 		else
 			render 'new'
@@ -29,6 +29,7 @@ class PostsController < ApplicationController
 
 	def update
 		@post = Post.new(params[:post].permit(:title, :text, :url))
+		@post.user_id = current_user.id
 
 		if @post.save
 			redirect_to posts_path

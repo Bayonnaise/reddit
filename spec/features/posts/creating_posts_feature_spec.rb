@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'creating posts' do
-	let(:user1) { create(:user) }
+	let(:user) { create(:user) }
 
 	context 'when not logged in' do
 		it 'user cannot create a post' do
@@ -12,13 +12,12 @@ describe 'creating posts' do
 
 	context 'when logged in' do
 		before(:each) do
-			login_as user1
+			login_as user
 		end
 
 		it 'user can add a text post and see it displayed' do
 			visit '/posts'
 			click_link 'Submit text post'
-			save_and_open_page
 			fill_in 'post_title', with: 'Test title'
 			fill_in 'post_text', with: 'Some body text'
 			click_button 'Submit'

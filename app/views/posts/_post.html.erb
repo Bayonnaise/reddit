@@ -1,26 +1,36 @@
-<div class='post-container'>
+<li class='list-group-item clearfix'>
 
-	<%= render partial: 'votes/votes', locals: {post: post} %>
-
-	<div>
-		<% if post.url.present? %>
-			<a href='<%= post.url %>'><%= post.title %></a> <span class='domain-text'>(domain)</span>
-			<% type = "url" %>
-		<% else %>
-			<%= link_to post.title, post_path(post) %>
-			<% type = 'text' %>
-		<% end %>
+	<div class='vote-section pull-left'>
+		<%= render partial: 'votes/votes', locals: {post: post} %>
 	</div>
 
-	<div>
-	submitted <%= time_ago_in_words(post.created_at) %> ago by <%= User.find(post.user_id).email %>
+	<div class='content-section'>
+		<div>
+			<h4 class='list-group-item-heading'>
+				<% if post.url.present? %>
+					<a href='<%= post.url %>'><%= post.title %></a> <span class='domain-text'><small>(<%= post.get_domain %>)</small></span>
+					<% type = "url" %>
+				<% else %>
+					<%= link_to post.title, post_path(post) %>
+					<% type = 'text' %>
+				<% end %>
+			</h4>
+		</div>
+
+		<div>
+			<p class="list-group-item-text">submitted <%= time_ago_in_words(post.created_at) %> ago by
+			<span><%= User.find_by(id: post.user_id).username unless post.user_id == nil %></span>
+			</p>
+		</div>
+
+		<div>
+			<p class="list-group-item-text">
+				<% if post.was_created_by?(current_user) %>
+					<%= link_to 'Edit post', edit_post_path(post, type: type) %>
+					<%= link_to 'Delete post', post_path(post), method: :delete %>
+				<% end %>
+			</p>
+		</div>
 	</div>
 
-	<div>
-		<% if post.was_created_by?(current_user) %>
-			<%= link_to 'Edit post', edit_post_path(post, type: type) %>
-			<%= link_to 'Delete post', post_path(post), method: :delete %>
-		<% end %>
-	</div>
-
-</div>
+</li>

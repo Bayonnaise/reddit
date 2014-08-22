@@ -10,9 +10,9 @@ User.destroy_all
 Post.destroy_all
 
 
-matt = User.create(email: 'matt@matt.com', password: '12345678', password_confirmation: '12345678')
-steve = User.create(email: 'steve@steve.com', password: '12345678', password_confirmation: '12345678')
-phil = User.create(email: 'phil@phil.com', password: '12345678', password_confirmation: '12345678')
+matt = User.create(username: 'chunkylover', email: 'matt@matt.com', password: '12345678', password_confirmation: '12345678')
+steve = User.create(username: 'bigbadtrevor', email: 'steve@steve.com', password: '12345678', password_confirmation: '12345678')
+phil = User.create(username: 'redditRobot', email: 'phil@phil.com', password: '12345678', password_confirmation: '12345678')
 
 matt.posts.create(title: 'Hello world!', text: 'This is a test post')
 matt.posts.create(title: 'Doppelgrammers is the only doppelganger site you need', url: 'http://doppelgrammer.herokuapp.com')
