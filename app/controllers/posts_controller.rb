@@ -15,6 +15,7 @@ class PostsController < ApplicationController
 		@post = Post.new(params[:post].permit(:title, :text, :url))
 
 		if @post.save
+			@post.votes << Vote.new(direction: 'up')
 			redirect_to posts_path
 		else
 			render 'new'

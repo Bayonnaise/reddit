@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'devise'
+gem 'rails_12factor'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
@@ -32,6 +33,9 @@ group :development, :test do
 	gem 'capybara'
 	gem 'factory_girl_rails'
 	gem 'rspec-collection_matchers'
+	gem 'poltergeist'
+	gem 'database_cleaner'
+	gem 'launchy'
 end
 
 

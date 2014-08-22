@@ -16,7 +16,7 @@
 			<%= f.text_field :text %>
 		<% elsif @type == "link" %>
 			<%= f.label :url %>
-			<%= f.text_field :url %>
+			<%= f.url_field :url %>
 		<% end %>
 
 		<%= f.submit "Submit" %>

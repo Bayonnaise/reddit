@@ -8,7 +8,7 @@
 <%= link_to "Submit a new link", new_post_path(type: "link") %>
 
 <% if @posts.any? %>
-	<%= render @posts.reverse %>
+	<%= render @posts.sort_by { |post| post.count_netvotes }.reverse %>
 <% else %>
 	No posts yet
 <% end %>
