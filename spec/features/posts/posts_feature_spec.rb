@@ -10,8 +10,8 @@ describe 'viewing posts' do
     it 'should display a prompt to add a post' do
       visit '/posts'
       expect(page).to have_content 'No posts yet'
-      expect(page).to have_link 'Submit a new text post'
-      expect(page).to have_link 'Submit a new link'
+      expect(page).to have_link 'Submit text post'
+      expect(page).to have_link 'Submit link post'
     end
   end
 
@@ -22,7 +22,13 @@ describe 'viewing posts' do
 
     it 'should display them' do
       visit '/posts'
-      expect(page).to have_content 'Test title'
+      expect(page).to have_link 'Test title'
+    end
+
+    it 'user can click through to read the text of a post' do
+      visit '/posts'
+      click_link 'Test title'
+      expect(page).to have_content 'This is the body'
     end
   end
 end

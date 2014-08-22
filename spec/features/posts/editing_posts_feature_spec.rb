@@ -19,9 +19,9 @@ describe 'editing posts' do
 			@user1.posts.create(title: 'Test title', text: 'This is the body')
 			visit '/posts'
 			click_link 'Edit post'
-			fill_in 'Text', with: 'Changed the body'
+			fill_in 'Title', with: 'Changed the title'
 			click_button 'Submit'
-			expect(page).to have_content 'Changed the body'
+			expect(page).to have_content 'Changed the title'
 		end
 
 		it 'user cannot edit the posts of others' do

@@ -6,8 +6,7 @@ describe 'creating posts' do
 	context 'when not logged in' do
 		it 'user cannot create a post' do
 			visit '/posts'
-			click_link 'Submit a new text post'
-			expect(page).to have_content 'Password'
+			expect(page).not_to have_link 'Submit link post'
 		end
 	end
 
@@ -18,19 +17,19 @@ describe 'creating posts' do
 
 		it 'user can add a text post and see it displayed' do
 			visit '/posts'
-			click_link 'Submit a new text post'
-			fill_in 'Title', with: 'Test title'
-			fill_in 'Text', with: 'Some body text'
+			click_link 'Submit text post'
+			save_and_open_page
+			fill_in 'post_title', with: 'Test title'
+			fill_in 'post_text', with: 'Some body text'
 			click_button 'Submit'
 			expect(page).to have_content 'Test title'
-			expect(page).to have_content 'Some body text'
 		end
 
 		it 'user can add a link post and see it displayed' do
 			visit '/posts'
-			click_link 'Submit a new link'
-			fill_in 'Title', with: 'Test title'
-			fill_in 'Url', with: 'http://www.reddit.com'
+			click_link 'Submit link post'
+			fill_in 'post_title', with: 'Test title'
+			fill_in 'post_url', with: 'http://www.reddit.com'
 			click_button 'Submit'
 			expect(page).to have_link('Test title', href: 'http://www.reddit.com')
 		end

@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
 	<div>
 		<%= link_to "Upvote", post_votes_path(post, direction: 'up'), class: 'vote-link' %>
-		<span class='vote-count'><%= post.count_netvotes %></span>
+		<span class='vote-count badge'><%= post.count_netvotes %></span>
 		<%= link_to "Downvote", post_votes_path(post, direction: 'down'), class: 'vote-link'%>
 	</div>
 <% else %>
