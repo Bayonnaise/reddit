@@ -1,3 +1,7 @@
+<%= link_to "Upvote", post_votes_path(post, direction: 'up'), method: :post %>
+<%= link_to "Downvote", post_votes_path(post, direction: 'down'), method: :post %>
+
+
 <% if post.url.present? %>
 	<a href='<%= post.url %>'><%= post.title %></a>
 	<% type = "url" %>
