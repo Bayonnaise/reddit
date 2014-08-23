@@ -5,7 +5,7 @@ describe 'comments' do
 		user = create(:user, username: "gorilla")
 		login_as user
 		user.posts.create(title: "Test title")
-		user.posts.last.comments.create(text: "elephant")
+		user.comments.create(text: "elephant", post_id: Post.last.id)
 	end
 
 	context 'viewing comments' do

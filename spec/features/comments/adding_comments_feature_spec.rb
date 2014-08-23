@@ -4,8 +4,6 @@ describe 'adding comments' do
 	before(:each) do
 		@user = create(:user)
 		@user.posts.create(title: "Test title")
-		post = Post.first
-		post.comments.create(text: "elephant")
 	end
 
 	context 'when not signed in' do
