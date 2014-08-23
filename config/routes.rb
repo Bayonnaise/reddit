@@ -3,6 +3,11 @@ Rails.application.routes.draw do
   devise_for :users
   resources :posts do
     resources :votes
+    resources :comments
+  end
+
+  resources :users do
+    resources :comments
   end
 
 

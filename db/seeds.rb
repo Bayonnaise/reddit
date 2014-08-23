@@ -8,9 +8,11 @@
 
 User.destroy_all
 Post.destroy_all
+Comment.destroy_all
+Vote.destroy_all
 
 
-matt = User.create(username: 'chunkylover', email: 'matt@matt.com', password: '12345678', password_confirmation: '12345678')
+matt = User.create(username: 'chunkychunk', email: 'matt@matt.com', password: '12345678', password_confirmation: '12345678')
 steve = User.create(username: 'bigbadtrevor', email: 'steve@steve.com', password: '12345678', password_confirmation: '12345678')
 phil = User.create(username: 'redditRobot', email: 'phil@phil.com', password: '12345678', password_confirmation: '12345678')
 

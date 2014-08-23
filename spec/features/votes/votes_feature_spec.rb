@@ -13,13 +13,13 @@ describe 'votes' do
 
 		it 'user cannot upvote posts', js: true do
 			visit '/posts'
-			click_link 'Upvote'
+			find('.upvote-link').click
 			expect(page).to have_content 'Password'
 		end
 
 		it 'user cannot downvote posts', js: true do
 			visit '/posts'
-			click_link 'Downvote'
+			find('.downvote-link').click
 			expect(page).to have_content 'Password'
 		end
 	end
@@ -34,7 +34,7 @@ describe 'votes' do
 			@user.posts.create(title: 'Test title')
 			visit '/posts'
 			expect(page).to have_css('.vote-count', text: '0')
-			click_link 'Upvote'
+			find('.upvote-link').click
 			expect(page).to have_css('.vote-count', text: '1')
 		end
 
@@ -42,14 +42,14 @@ describe 'votes' do
 			@user.posts.create(title: 'Test title')
 			visit '/posts'
 			expect(page).to have_css('.vote-count', text: '0')
-			click_link 'Downvote'
+			find('.downvote-link').click
 			expect(page).to have_css('.vote-count', text: '-1')
 		end
 
 		xit 'user cannot vote for own posts', js: true do
 			@user2.posts.create(title: 'Test title')
 			visit '/posts'
-			click_link 'Upvote'
+			find('.upvote-link').click
 			expect(page).to have_css('.vote-count', text: '0')
 		end
 	end

@@ -2,7 +2,8 @@ class Post < ActiveRecord::Base
 	validates :title, presence: true
 
 	belongs_to :user
-	has_many :votes
+	has_many :votes, dependent: :destroy
+	has_many :comments, dependent: :destroy
 
 	def was_created_by?(user)
 		self.user == user

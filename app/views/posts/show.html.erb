@@ -1,2 +1,37 @@
-<%= @post.title %>
-<%= @post.text %>
+<h2><%= @post.title %></h2>
+<h5><%= @post.text %></h5>
+
+<%= form_for ([@post, @comment]) do |f| %>
+	<% if @comment.errors.any? %>
+		<%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+		<ul>
+			<% @comment.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+		</ul>
+	<% end %>
+
+	<div class='form-group'>
+		<%= f.label :text, "Comment" %>
+		<%= f.text_field :text, class: 'form-control' %>
+	</div>
+
+	<div class='form-group'>
+		<%= f.submit "Submit", class: 'btn btn-default' %>
+	</div>
+<% end %>
+
+
+<% if @post.comments.any? %>
+	<ul class='list-group'>
+		<%= @post.comments.each do |comment| %>
+			<li class='list-group-item'>
+				<%= comment.text %>
+				<p>submitted <%= time_ago_in_words(comment.created_at) %> ago by
+				<span><%= User.find_by(id: comment.user_id).username unless comment.user_id == nil %></span></p>
+			</li>
+		<% end %>
+	</ul>
+<% else %>
+	No comments yet
+<% end %>

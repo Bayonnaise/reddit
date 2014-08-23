@@ -1,3 +1,22 @@
 // Place all the styles related to the votes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.votes-container {
+	width: 64px;
+}
+
+.vote-count {
+	width: 50px;
+	margin: 3px;
+}
+
+.upvote-link, .downvote-link {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.glyphicon {
+	font-size: 15px;
+}
