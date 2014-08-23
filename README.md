@@ -8,22 +8,23 @@ Build a simple Reddit clone using Rails. Include tabs for sorting the posts by t
 
 Current status
 --
-Visit the [live Heroku site]
+Try the [latest build on Heroku]
 
-Users, posts and votes are all implemented and tested.
+Users, posts, comments and votes are all implemented and tested.
 
 Next steps
 --
-- Finish Bootstrap styling
-- Replace the vote links with just the glyphicons
-- Create a proper show post page
+- Finish Bootstrap styling - particularly forms, comments
+- Associate users with votes
 - Stop users voting on a post multiple times
+- Figure out why comment obj info is being displayed
 
 Tools used
 --
 - Ruby on Rails
-- Bootstrap and CSS
+- Bootstrap
 - Heroku
+- ActiveRecord and postgresql
 - Gems inc Devise, FactoryGirl, Poltergeist, database_cleaner
 
-[live Heroku site]:http://reddit-clone.herokuapp.com/
+[latest build on Heroku]:http://reddit-clone.herokuapp.com/
