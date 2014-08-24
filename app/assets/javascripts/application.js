@@ -14,3 +14,10 @@
 //= require jquery_ujs
 //= require_tree .
 //= require bootstrap-sprockets
+
+// $(document).ready(function () {
+//   $('ul.nav > li').click(function (e) {
+//     $('ul.nav > li').removeClass('active');
+//     $(this).addClass('active');                
+//   });            
+// });

@@ -23,7 +23,7 @@
 		<% elsif @type == "link" %>
 			<div class='form-group input-group'>	
 				<span class="input-group-addon">http://</span>
-				<%= f.url_field :url, class: 'form-control', placeholder: 'www.example.com' %>
+				<%= f.text_field :url, class: 'form-control', placeholder: 'www.example.com' %>
 			</div>
 		<% end %>
 

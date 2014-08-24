@@ -34,5 +34,10 @@ RSpec.describe Post, :type => :model do
       post = create(:post, url: 'http://www.google.com/test-string5678')
       expect(post.get_domain).to eq 'google.com'
     end
+
+    it "adds http:// if it isn't already there" do
+      post = create(:post, url: 'www.google.com/test-string5678')
+      expect(post.url).to eq 'http://www.google.com/test-string5678'
+    end
   end
 end

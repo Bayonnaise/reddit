@@ -5,6 +5,8 @@ class Post < ActiveRecord::Base
 	has_many :votes, dependent: :destroy
 	has_many :comments, dependent: :destroy
 
+	before_save :format_url
+
 	def was_created_by?(user)
 		self.user == user
 	end
@@ -22,6 +24,12 @@ class Post < ActiveRecord::Base
 	end
 
 	def get_domain
-		URI.parse(self.url).host.sub(/^www\./, '')
+		URI.parse(self.url).host.sub(/^www\./, '') if self.url.present?
+	end
+
+	def format_url
+		if self.url.present?
+			self.url = "http://#{self.url}" unless self.url[/^https?/] 
+		end
 	end
 end
