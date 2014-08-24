@@ -40,6 +40,8 @@ group :development, :test do
 	gem 'launchy'
 end
 
+gem "codeclimate-test-reporter", group: :test, require: nil
+
 
 
 # Use ActiveModel has_secure_password
