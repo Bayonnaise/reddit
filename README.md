@@ -17,7 +17,7 @@ Try the [latest build on Heroku]
 
 Next steps
 --
-- Finish Bootstrap styling - particularly user session forms
+- Finish Bootstrap styling
 - Associate users with votes
 - Stop users voting on a post multiple times
 
