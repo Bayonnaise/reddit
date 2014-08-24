@@ -3,13 +3,18 @@ class PostsController < ApplicationController
 	before_action :authenticate_user!, except: :index
 
 	def index
-		@posts = Post.all.sort_by { |post| post.count_netvotes }.reverse
+		@posts = Post.all.sort_by { |post| post.reddit_score }.reverse
 	end
 
 	def newest
 		@posts = Post.all.reverse
 		render 'index'
 	end
+
+	def top
+		@posts = Post.all.sort_by { |post| post.count_netvotes }.reverse
+		render 'index'
+	end 
 
 	def new
 		@post = Post.new
@@ -21,6 +26,7 @@ class PostsController < ApplicationController
 		@post.user_id = current_user.id
 
 		if @post.save
+			@post.votes.create(direction: 'up')
 			redirect_to posts_path
 		else
 			render 'new'

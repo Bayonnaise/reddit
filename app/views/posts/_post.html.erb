@@ -25,6 +25,7 @@
 		<div>
 			<p class="list-group-item-text bottom-text">
 				<%= link_to pluralize(post.comments.count, "comment"), post_path(post), class: 'options-item' %>
+				<!-- <span class='options-item'>Reddit score <%= post.reddit_score %></span> -->
 				<% if post.was_created_by?(current_user) %>
 					<%= link_to 'edit', edit_post_path(post, type: type), class: 'options-item' %>
 					<%= link_to 'delete', post_path(post), method: :delete, class: 'options-item' %>

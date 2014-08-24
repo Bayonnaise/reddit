@@ -32,4 +32,22 @@ class Post < ActiveRecord::Base
 			self.url = "http://#{self.url}" unless self.url[/^https?/] 
 		end
 	end
+
+	def reddit_score
+		baseline_date = Time.new(1970, 1, 1)
+		post_age = self.created_at - baseline_date - 1134028003
+
+		post_votes = self.count_netvotes
+		if post_votes > 0
+			sign = 1
+		elsif post_votes < 0
+			sign = -1
+		else
+			sign = 0
+		end
+
+		order = Math.log([1, post_votes.abs].max, 10)
+
+		return (order + sign * post_age / 45000).round(7)
+	end
 end
