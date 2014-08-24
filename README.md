@@ -35,5 +35,5 @@ Tools used
 - ActiveRecord and postgresql
 - Gems inc Devise, FactoryGirl, Poltergeist, database_cleaner
 
-[Reddit ranking algorithm]http://amix.dk/blog/post/19588
+[Reddit ranking algorithm]:http://amix.dk/blog/post/19588
 [latest build on Heroku]:http://reddit-clone.herokuapp.com/
