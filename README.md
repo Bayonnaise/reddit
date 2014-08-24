@@ -8,9 +8,9 @@ Build a simple Reddit clone using Rails. Include tabs for sorting the posts by t
 
 Development status
 --
+Try the [latest build on Heroku]
 [![Code Climate](https://codeclimate.com/github/Bayonnaise/reddit/badges/gpa.svg)](https://codeclimate.com/github/Bayonnaise/reddit)
 [![Test Coverage](https://codeclimate.com/github/Bayonnaise/reddit/badges/coverage.svg)](https://codeclimate.com/github/Bayonnaise/reddit)
-Try the [latest build on Heroku]
 
 - Users, posts, comments and votes are implemented and tested.
 - You can sort by most popular or newest posts.
