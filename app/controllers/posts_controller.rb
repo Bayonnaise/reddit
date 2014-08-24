@@ -16,6 +16,11 @@ class PostsController < ApplicationController
 		render 'index'
 	end 
 
+	def commented
+		@posts = Post.all.sort_by { |post| post.comments.count }.reverse
+		render 'index'
+	end
+
 	def new
 		@post = Post.new
 		@type = params[:type]

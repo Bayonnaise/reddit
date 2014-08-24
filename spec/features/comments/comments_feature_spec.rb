@@ -11,13 +11,13 @@ describe 'comments' do
 	context 'viewing comments' do
 		it 'user can view the comments on a post' do
 			visit '/posts'
-			click_link 'comment'
+			find('.comments-link').click
 			expect(page).to have_content('elephant')
 		end
 
 		it 'user can see who left each comment' do
 			visit '/posts'
-			click_link 'comment'
+			find('.comments-link').click
 			expect(page).to have_content ('gorilla')
 		end
 

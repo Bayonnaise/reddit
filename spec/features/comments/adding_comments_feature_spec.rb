@@ -9,7 +9,7 @@ describe 'adding comments' do
 	context 'when not signed in' do
 		it 'user cannot leave a comment' do
 			visit '/posts'
-			click_link 'comment'
+			find('.comments-link').click
 			expect(page).to have_content "Password"
 		end
 	end
@@ -21,7 +21,7 @@ describe 'adding comments' do
 
 		it 'user can add a comment' do
 			visit '/posts'
-			click_link 'comment'
+			find('.comments-link').click
 			fill_in 'Comment', with: "Cheesy chips"
 			click_button 'Submit'
 			expect(page).to have_content 'Cheesy chips'
