@@ -46,6 +46,16 @@ describe 'votes' do
 			expect(page).to have_css('.vote-count', text: '-1')
 		end
 
+		xit 'user cannot vote more than once on a post', js: true do
+			@user2.posts.create(title: "Test title")
+			visit '/posts'
+			expect(page).to have_css('.vote-count', text: '0')
+			find('.upvote-link').click
+			expect(page).to have_css('.vote-count', text: '1')
+			find('.upvote-link').click
+			expect(page).to have_css('.vote-count', text: '1')
+		end
+
 		xit 'user cannot vote for own posts', js: true do
 			@user2.posts.create(title: 'Test title')
 			visit '/posts'

@@ -1,0 +1,5 @@
+<li class='list-group-item'>
+	<%= comment.text %>
+	<p>submitted <%= time_ago_in_words(comment.created_at) %> ago by
+	<span><%= get_username(comment) %></span></p>
+</li>

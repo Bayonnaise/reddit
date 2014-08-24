@@ -1,0 +1,8 @@
+<h2><%= @user.username %>'s activity</h2>
+<h5>Joined reddit <%= time_ago_in_words(@user.created_at) %> ago</h5>
+
+<%= render @user.posts %>
+
+<ul>
+	<%= render @user.comments %>
+</ul>

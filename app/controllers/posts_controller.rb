@@ -3,7 +3,12 @@ class PostsController < ApplicationController
 	before_action :authenticate_user!, except: :index
 
 	def index
-		@posts = Post.all
+		@posts = Post.all.sort_by { |post| post.count_netvotes }.reverse
+	end
+
+	def newest
+		@posts = Post.all.reverse
+		render 'index'
 	end
 
 	def new

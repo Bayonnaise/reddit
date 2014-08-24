@@ -2,6 +2,10 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :posts do
+    collection do
+      get 'newest'
+    end
+
     resources :votes
     resources :comments
   end

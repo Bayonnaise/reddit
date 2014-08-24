@@ -54,7 +54,7 @@ describe 'deleting posts' do
 			expect(page).not_to have_content 'Test title'
 		end
 
-		it 'user cannot edit the posts of others' do
+		it 'user cannot delete the posts of others' do
 			@user2.posts.create(title: 'Test title', text: 'This is the body')
 			visit '/posts'
 			expect(page).not_to have_link 'delete'

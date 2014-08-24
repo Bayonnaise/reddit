@@ -1,5 +1,15 @@
-<h2><%= @post.title %></h2>
-<h5><%= @post.text %></h5>
+<div class='panel panel-default'>
+	<div class='panel-heading'>
+		<h3 class='panel-title'><%= @post.title %></h3>
+	</div>
+	<div class='panel-body'>
+		<%= @post.text %>
+		<div class="list-group-item-text bottom-text">
+			submitted <%= time_ago_in_words(@post.created_at) %> ago by
+			<span><%= link_to get_username(@post), user_path(get_user(@post)) %></span>
+		</div>
+	</div>
+</div>
 
 <%= form_for ([@post, @comment]) do |f| %>
 	<% if @comment.errors.any? %>
@@ -23,12 +33,17 @@
 
 
 <% if @post.comments.any? %>
+	<h4>Comments</h4>
 	<ul class='list-group'>
-		<%= @post.comments.each do |comment| %>
+		<% @post.comments.each do |comment| %>
 			<li class='list-group-item'>
-				<%= comment.text %>
-				<p>submitted <%= time_ago_in_words(comment.created_at) %> ago by
-				<span><%= User.find_by(id: comment.user_id).username unless comment.user_id == nil %></span></p>
+				<div class="list-group-item-text secondary-text">
+					<%= comment.text %>
+				</div>
+				<div class="list-group-item-text bottom-text">
+					submitted <%= time_ago_in_words(comment.created_at) %> ago by
+					<span><%= link_to get_username(comment), user_path(get_user(comment)) %></span>
+				</div>
 			</li>
 		<% end %>
 	</ul>
