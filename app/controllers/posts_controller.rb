@@ -32,6 +32,13 @@ class PostsController < ApplicationController
 
 		if @post.save
 			@post.votes.create(direction: 'up')
+			Pusher['reddit'].trigger('new_post', {
+	      title: @post.title,
+	      test: @post.text,
+	      url: @post.url,
+	      user_id: @post.user_id,
+	      created_at: @post.created_at
+	    })
 			redirect_to posts_path
 		else
 			render 'new'
