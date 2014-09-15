@@ -38,5 +38,15 @@ Tools used
 - ActiveRecord and postgresql
 - Gems inc Devise, FactoryGirl, Poltergeist, database_cleaner
 
+How to run tests
+--
+
+```shell
+git clone https://github.com/Bayonnaise/reddit.git
+cd reddit
+bin/rake db:create db:migrate RAILS_ENV=test
+rspec
+```
+
 [Reddit ranking algorithm]:http://amix.dk/blog/post/19588
 [latest build on Heroku]:http://reddit-clone.herokuapp.com/
