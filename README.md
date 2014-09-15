@@ -1,4 +1,4 @@
-reddit
+reddit [![Code Climate](https://codeclimate.com/github/Bayonnaise/reddit/badges/gpa.svg)](https://codeclimate.com/github/Bayonnaise/reddit) [![Test Coverage](https://codeclimate.com/github/Bayonnaise/reddit/badges/coverage.svg)](https://codeclimate.com/github/Bayonnaise/reddit)
 ======
 **Week 9 Friday Challenge**
 
