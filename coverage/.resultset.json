@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/davidbayon/MakersAcademy/projects/reddit/config/environment.rb": [
+      "/Users/davidbayon/Coding/reddit/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/davidbayon/MakersAcademy/projects/reddit/config/application.rb": [
+      "/Users/davidbayon/Coding/reddit/config/application.rb": [
         1,
         null,
         null,
@@ -40,13 +40,13 @@
         null,
         null
       ],
-      "/Users/davidbayon/MakersAcademy/projects/reddit/config/boot.rb": [
+      "/Users/davidbayon/Coding/reddit/config/boot.rb": [
         null,
         1,
         null,
         1
       ],
-      "/Users/davidbayon/MakersAcademy/projects/reddit/config/environments/test.rb": [
+      "/Users/davidbayon/Coding/reddit/config/environments/test.rb": [
         1,
         null,
         null,
@@ -87,7 +87,7 @@
         null,
         null
       ],
-      "/Users/davidbayon/MakersAcademy/projects/reddit/config/initializers/assets.rb": [
+      "/Users/davidbayon/Coding/reddit/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -97,7 +97,7 @@
         null,
         null
       ],
-      "/Users/davidbayon/MakersAcademy/projects/reddit/config/initializers/backtrace_silencers.rb": [
+      "/Users/davidbayon/Coding/reddit/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -106,12 +106,12 @@
         null,
         null
       ],
-      "/Users/davidbayon/MakersAcademy/projects/reddit/config/initializers/cookies_serializer.rb": [
+      "/Users/davidbayon/Coding/reddit/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/davidbayon/MakersAcademy/projects/reddit/config/initializers/devise.rb": [
+      "/Users/davidbayon/Coding/reddit/config/initializers/devise.rb": [
         null,
         null,
         1,
@@ -369,13 +369,13 @@
         null,
         null
       ],
-      "/Users/davidbayon/MakersAcademy/projects/reddit/config/initializers/filter_parameter_logging.rb": [
+      "/Users/davidbayon/Coding/reddit/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/davidbayon/MakersAcademy/projects/reddit/config/initializers/inflections.rb": [
+      "/Users/davidbayon/Coding/reddit/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -393,18 +393,24 @@
         null,
         null
       ],
-      "/Users/davidbayon/MakersAcademy/projects/reddit/config/initializers/mime_types.rb": [
+      "/Users/davidbayon/Coding/reddit/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/davidbayon/MakersAcademy/projects/reddit/config/initializers/session_store.rb": [
+      "/Users/davidbayon/Coding/reddit/config/initializers/pusher.rb": [
+        1,
+        null,
+        1,
+        1
+      ],
+      "/Users/davidbayon/Coding/reddit/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/davidbayon/MakersAcademy/projects/reddit/config/initializers/wrap_parameters.rb": [
+      "/Users/davidbayon/Coding/reddit/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -420,9 +426,11 @@
         null,
         null
       ],
-      "/Users/davidbayon/MakersAcademy/projects/reddit/config/routes.rb": [
+      "/Users/davidbayon/Coding/reddit/config/routes.rb": [
         1,
         null,
+        1,
+        1,
         1,
         1,
         1,
@@ -494,7 +502,7 @@
         null,
         null
       ],
-      "/Users/davidbayon/MakersAcademy/projects/reddit/app/models/user.rb": [
+      "/Users/davidbayon/Coding/reddit/app/models/user.rb": [
         1,
         null,
         null,
@@ -507,47 +515,48 @@
         1,
         null
       ],
-      "/Users/davidbayon/MakersAcademy/projects/reddit/app/helpers/application_helper.rb": [
+      "/Users/davidbayon/Coding/reddit/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/davidbayon/MakersAcademy/projects/reddit/app/helpers/comments_helper.rb": [
+      "/Users/davidbayon/Coding/reddit/app/helpers/comments_helper.rb": [
         1,
         null
       ],
-      "/Users/davidbayon/MakersAcademy/projects/reddit/app/helpers/posts_helper.rb": [
+      "/Users/davidbayon/Coding/reddit/app/helpers/posts_helper.rb": [
         1,
-        null
-      ],
-      "/Users/davidbayon/MakersAcademy/projects/reddit/app/helpers/users_helper.rb": [
-        1,
-        1,
-        31,
-        null,
-        null,
-        1,
-        30,
         null,
         null
       ],
-      "/Users/davidbayon/MakersAcademy/projects/reddit/app/helpers/votes_helper.rb": [
+      "/Users/davidbayon/Coding/reddit/app/helpers/users_helper.rb": [
         1,
-        null
-      ],
-      "/Users/davidbayon/MakersAcademy/projects/reddit/app/controllers/comments_controller.rb": [
         1,
+        40,
+        null,
         null,
         1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
+        39,
         null,
         null
       ],
-      "/Users/davidbayon/MakersAcademy/projects/reddit/app/controllers/application_controller.rb": [
+      "/Users/davidbayon/Coding/reddit/app/helpers/votes_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/davidbayon/Coding/reddit/app/controllers/comments_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/davidbayon/Coding/reddit/app/controllers/application_controller.rb": [
         1,
         null,
         null,
@@ -562,7 +571,7 @@
         null,
         null
       ],
-      "/Users/davidbayon/MakersAcademy/projects/reddit/app/controllers/posts_controller.rb": [
+      "/Users/davidbayon/Coding/reddit/app/controllers/posts_controller.rb": [
         1,
         null,
         1,
@@ -572,8 +581,18 @@
         null,
         null,
         1,
-        0,
-        0,
+        1,
+        1,
+        null,
+        null,
+        1,
+        4,
+        1,
+        null,
+        null,
+        1,
+        4,
+        1,
         null,
         null,
         1,
@@ -586,6 +605,14 @@
         3,
         null,
         3,
+        2,
+        2,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         2,
         null,
         1,
@@ -621,7 +648,7 @@
         null,
         null
       ],
-      "/Users/davidbayon/MakersAcademy/projects/reddit/app/controllers/users_controller.rb": [
+      "/Users/davidbayon/Coding/reddit/app/controllers/users_controller.rb": [
         1,
         null,
         1,
@@ -629,7 +656,7 @@
         null,
         null
       ],
-      "/Users/davidbayon/MakersAcademy/projects/reddit/app/controllers/votes_controller.rb": [
+      "/Users/davidbayon/Coding/reddit/app/controllers/votes_controller.rb": [
         1,
         null,
         1,
@@ -641,13 +668,13 @@
         null,
         null
       ],
-      "/Users/davidbayon/MakersAcademy/projects/reddit/app/models/comment.rb": [
+      "/Users/davidbayon/Coding/reddit/app/models/comment.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/davidbayon/MakersAcademy/projects/reddit/app/models/post.rb": [
+      "/Users/davidbayon/Coding/reddit/app/models/post.rb": [
         1,
         1,
         null,
@@ -658,38 +685,56 @@
         1,
         null,
         1,
-        22,
+        31,
         null,
         null,
         1,
-        55,
+        113,
         null,
         null,
         1,
-        55,
+        113,
         null,
         null,
         1,
+        89,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        34,
+        3,
+        null,
+        null,
+        null,
+        1,
+        52,
+        52,
+        null,
+        52,
+        52,
+        6,
+        null,
+        0,
+        null,
         46,
         null,
         null,
-        1,
-        2,
+        52,
         null,
-        null,
-        1,
-        25,
-        3,
-        null,
+        52,
         null,
         null
       ],
-      "/Users/davidbayon/MakersAcademy/projects/reddit/app/models/vote.rb": [
+      "/Users/davidbayon/Coding/reddit/app/models/vote.rb": [
         1,
         1,
         null
       ]
     },
-    "timestamp": 1408878821
+    "timestamp": 1410780250
   }
 }
