@@ -13,8 +13,6 @@ Screenshot
 
 Development status
 --
-[![Code Climate](https://codeclimate.com/github/Bayonnaise/reddit/badges/gpa.svg)](https://codeclimate.com/github/Bayonnaise/reddit)
-[![Test Coverage](https://codeclimate.com/github/Bayonnaise/reddit/badges/coverage.svg)](https://codeclimate.com/github/Bayonnaise/reddit)
 
 Try the [latest build on Heroku]
 
